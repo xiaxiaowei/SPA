@@ -1,13 +1,13 @@
 import web;
 
 urls = ("/", "home",
-        "/hello", "hello"
+        "/hello", "hello" 
         );
 app = web.application(urls, globals());
 
 class home:
     def GET(self):
-        raise web.seeother('/static/');
+        raise web.redirect('/static/');
 
 class hello:
     def GET(self):
