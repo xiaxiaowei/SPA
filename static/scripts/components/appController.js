@@ -12,10 +12,27 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             console.log(channelId);
             var self = this;
             if (channelId == 'Mobile Carrier Billing') {
-                require(['views/mobileView'], function(MobileView) {
-                    var view = new MobileView();
-                    self.renderView.call(self, view);
-                });
+                if (0) // 如果没有国家信息，选择国家
+                {
+                    require(['views/mobileSelectCountryView'], function(MobileSelectCountryView) {
+                        var view = new MobileSelectCountryView();
+                        self.renderView.call(self, view);
+                    });
+                }
+                else if (1)
+                {
+                    require(['views/mobileSelectOperatorView'], function(MobileSelectOperatorView) {
+                        var view = new MobileSelectOperatorView();
+                        self.renderView.call(self, view);
+                    });
+                }
+                else
+                {
+                    require(['views/mobileView'], function(MobileView) {
+                        var view = new MobileView();
+                        self.renderView.call(self, view);
+                    });
+                }
             }
             else if (channelId == 'Credit Cards') {
                 require(['views/creditView'], function(CreditView) {
