@@ -16,7 +16,8 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
         },
         next: function(event) {
             var country = event.target.getAttribute('country');
-            Router.navigate('country/'+country, {trigger: true});
+            app.selectedCountry = country;
+            Backbone.history.history.back(); //返回
         }
     });
     return mobileSelectCountryView;

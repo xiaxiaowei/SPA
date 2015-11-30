@@ -8,28 +8,35 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
                 self.renderView.call(self, view);
             });
         },
+        countries: function () {
+            var self = this;
+            require(['views/mobileSelectCountryView'], function(MobileSelectCountryView) {
+                var view = new MobileSelectCountryView();
+                self.renderView.call(self, view);
+            });
+        },
+        mobile: function ()
+        {
+            var self = this;
+            require(['views/mobileView'], function(MobileView) {
+                var view = new MobileView();
+                self.renderView.call(self, view);
+            });
+        },
         channel: function(channelId) {
             console.log(channelId);
             var self = this;
             if (channelId == 'Mobile Carrier Billing') {
-                if (1) // 如果没有国家信息，选择国家
+                if (app.selectedCountry.length <= 0) // 如果没有国家信息，选择国家
                 {
-                    require(['views/mobileSelectCountryView'], function(MobileSelectCountryView) {
-                        var view = new MobileSelectCountryView();
-                        self.renderView.call(self, view);
-                    });
-                }
-                else if (1)
-                {
-                    require(['views/mobileSelectOperatorView'], function(MobileSelectOperatorView) {
-                        var view = new MobileSelectOperatorView();
-                        self.renderView.call(self, view);
+                    require(['routers/router'], function(Router) {
+                        Router.navigate('countries', {trigger: true});
                     });
                 }
                 else
                 {
-                    require(['views/mobileView'], function(MobileView) {
-                        var view = new MobileView();
+                    require(['views/mobileSelectOperatorView'], function(MobileSelectOperatorView) {
+                        var view = new MobileSelectOperatorView();
                         self.renderView.call(self, view);
                     });
                 }
