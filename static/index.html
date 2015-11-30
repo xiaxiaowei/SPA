@@ -5,9 +5,8 @@
     <title>Single Page Application Demo</title>
     <!--
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="styles/site.css" rel="stylesheet" type="text/css" />
-    <link href="styles/modern.css" rel="stylesheet" type="text/css" />
     -->
+    <link href="styles/core.css" rel="stylesheet" type="text/css" />
     <script data-main="scripts/app.js" src="scripts/lib/require.js"></script>
     <meta name="viewport" content="width=device-width"/>
 </head>
@@ -22,10 +21,20 @@
 <!-- Home -->
 <script type="text/template" id="home-template">
     <!-- <h1>selected: <%= selectedChannel %></h1> -->
+    <div class="title">Huawei ePay</div>
+    <div>A Grail Item</div>
+    <div>$1.00</div>
     <h1>Choose a payment method</h1>
-    <% _.each(channels, function(channel, i) { %>
-        <li><input id="next" type="button" class="" channelId="<%= channel %>"/><%= channel %></li>
-    <% }) %>
+    <div class="selection">
+        <ul>
+            <% _.each(channels, function(channel, i) { %>
+                <li>
+                    <input id="next" type="button" class="" channelId="<%= channel %>" value="<%= channel %>"/>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+    <div style="float:left">Customer service info.: If you have payment errors, please contact 400-22121-21212.</div>
 </script>
 
 <script type="text/template" id="credit-template">
