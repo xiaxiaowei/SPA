@@ -8,6 +8,13 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
                 self.renderView.call(self, view);
             });
         },
+        mobile: function() {
+            var self = this;
+            require(['views/mobileView'], function(MobileView) {
+                var view = new MobileView();
+                self.renderView.call(self, view);
+            });
+        },
         renderView: function(view) {
             this.currentView && this.currentView.remove();
             $('#main').html(view.render().el);

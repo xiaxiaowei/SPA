@@ -21,7 +21,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
             return this;
         },
         next: function() {
-            Router.navigate('#mobile', {trigger: true});
+            Router.navigate('mobile', {trigger: true});
         },
         
         // ----------------
