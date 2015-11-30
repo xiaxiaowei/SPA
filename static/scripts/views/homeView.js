@@ -24,24 +24,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
         next: function(event) {
             var channelId = event.target.getAttribute('channelId');
             Router.navigate('channel/'+channelId, {trigger: true});
-        },
-        
-        // ----------------
-        addCreateAgentButton: function() {
-            // var btn = document.createElement('input');
-            // btn.type = 'button';
-            // btn.value = 'Create Agent';
-            // btn.className = 'default';
-            // btn.id = 'btnCreateAgent';
-            // btn.addEventListener('click', function() {
-            //     Router.navigate('#/createAgent', {trigger: true});
-            // }, false);
-            // return btn;
-        },
-        addOne: function(agent) {
-            // var view = new agentTileView({ model: agent });
-            // this.$el.append(view.render().el);
-        } 
+        }
     });
     return homeView;
 });
