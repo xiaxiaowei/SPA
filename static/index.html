@@ -21,9 +21,10 @@
 
 <!-- Home -->
 <script type="text/template" id="home-template">
-    <h1>selected: <%= selectedChannel %></h1>
+    <!-- <h1>selected: <%= selectedChannel %></h1> -->
+    <h1>Choose a payment method</h1>
     <% _.each(channels, function(channel, i) { %>
-        <li><%= channel%></li>
+        <li><input type="button" class="" onClick=""/><%= channel%></li>
     <% }) %>
 </script>
 </html>
