@@ -17,6 +17,18 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
                     self.renderView.call(self, view);
                 });
             }
+            else if (channelId == 'Credit Cards') {
+                require(['views/creditView'], function(CreditView) {
+                    var view = new CreditView();
+                    self.renderView.call(self, view);
+                });
+            }
+            else if (channelId == 'Broadband Billing') {
+                require(['views/broadbandView'], function(BroadbandView) {
+                    var view = new BroadbandView();
+                    self.renderView.call(self, view);
+                });
+            }
         },
         renderView: function(view) {
             this.currentView && this.currentView.remove();
