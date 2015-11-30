@@ -42,9 +42,12 @@
 
 <script type="text/template" id="mobile-select-country-template">
     Your position is not currently located, please select the country:
+    <% _.each(countries, function(country, i) { %>
+        <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
+    <% }) %>
 </script>
 
-<script type="text/template" id="mobile-select-country-operator">
+<script type="text/template" id="mobile-select-operator-template">
     Your position is in the UK, please select your mobile operator:
 </script>
 

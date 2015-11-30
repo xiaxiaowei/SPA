@@ -3,11 +3,12 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
         tagName: 'div',
         template:_.template($('#mobile-select-country-template').html()),
         initialize: function() {
-              
+            this.countries = app.countries;
         },
         render: function() {
             this.$el.empty();
-            this.$el.html(this.template());
+            var jsonObject = {"countries":this.countries};
+            this.$el.html(this.template(jsonObject)); //模板使用JSON对象
             return this;
         }
     });

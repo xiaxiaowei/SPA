@@ -20,6 +20,10 @@ requirejs.config({
 });
 
 var app = app || {};
+// Just for test begin
+app.countries = ['Austris', 'Belgium', 'Finland', 'Germany', 'Ireland', 'Cyprus', 'Denmark', 'France', 'Greece'];
+
+// Just for test end.
 
 require(['routers/router', 'components/dataService'], function (router, dataService) { 
     $(document).ready(function (){

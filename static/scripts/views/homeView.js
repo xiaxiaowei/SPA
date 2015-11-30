@@ -11,7 +11,8 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
         },
         render: function() {
             this.$el.empty();
-            this.$el.html(this.template(this.channelsInfo.toJSON()));
+            var info = this.channelsInfo.toJSON(); // toJSON生成json对象，不是字符串
+            this.$el.html(this.template(info));
             
             // this.$el.append("HomeView"+this.channelsInfo.get('selectedChannel'));
             // this.$el.append(this.addCreateAgentButton());
