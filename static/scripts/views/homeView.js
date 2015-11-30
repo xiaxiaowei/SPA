@@ -6,6 +6,9 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
         initialize: function() {
             this.channelsInfo = app.channelsInfo;
         },
+        events: {
+                "click #next": "next"
+        },
         render: function() {
             this.$el.empty();
             this.$el.html(this.template(this.channelsInfo.toJSON()));
@@ -17,6 +20,11 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
             // }, this);
             return this;
         },
+        next: function() {
+            Router.navigate('#mobile', {trigger: true});
+        },
+        
+        // ----------------
         addCreateAgentButton: function() {
             // var btn = document.createElement('input');
             // btn.type = 'button';

@@ -2,7 +2,10 @@ define(['jquery', 'underscore', 'backbone', 'components/appController'], functio
 AppController) {
     var router = Backbone.Router.extend({
         routes: {
-            '': 'home'
+            '': 'home',
+            'mobile':'mobile',
+            'broadband':'broadband',
+            'credit':'credit'
         },
         initialize: function() {
             var routeName;
