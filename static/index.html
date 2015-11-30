@@ -18,4 +18,12 @@
         </section>
     </div>
 </body>
+
+<!-- Home -->
+<script type="text/template" id="home-template">
+    <h1>selected: <%= selectedChannel %></h1>
+    <% _.each(channels, function(channel, i) { %>
+        <li><%= channel%></li>
+    <% }) %>
+</script>
 </html>

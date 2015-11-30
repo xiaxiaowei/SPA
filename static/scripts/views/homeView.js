@@ -1,13 +1,16 @@
-define(['jquery', 'underscore', 'backbone', "routers/router"],
-    function ($, _, Backbone, Router) {
+define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsInfo"],
+    function ($, _, Backbone, Router, ChannelsInfo) {
     var homeView = Backbone.View.extend({
         tagName: 'div',
+        template:_.template($('#home-template').html()),
         initialize: function() {
-            //this.collection = app.agents;
+            this.channelsInfo = app.channelsInfo;
         },
         render: function() {
             this.$el.empty();
-            this.$el.append("HomeView");
+            this.$el.html(this.template(this.channelsInfo.toJSON()));
+            
+            // this.$el.append("HomeView"+this.channelsInfo.get('selectedChannel'));
             // this.$el.append(this.addCreateAgentButton());
             // this.collection.each(function(item) {
             //     this.addOne(item);

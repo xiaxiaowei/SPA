@@ -21,8 +21,9 @@ requirejs.config({
 
 var app = app || {};
 
-require(['routers/router'], function (router) { 
+require(['routers/router', 'components/dataService'], function (router, dataService) { 
     $(document).ready(function (){
+        dataService.getInitData();
         router.start();
     });
 });
