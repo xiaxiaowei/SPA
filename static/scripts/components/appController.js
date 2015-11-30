@@ -8,12 +8,15 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
                 self.renderView.call(self, view);
             });
         },
-        mobile: function() {
+        channel: function(channelId) {
+            console.log(channelId);
             var self = this;
-            require(['views/mobileView'], function(MobileView) {
-                var view = new MobileView();
-                self.renderView.call(self, view);
-            });
+            if (channelId == 'Mobile Carrier Billing') {
+                require(['views/mobileView'], function(MobileView) {
+                    var view = new MobileView();
+                    self.renderView.call(self, view);
+                });
+            }
         },
         renderView: function(view) {
             this.currentView && this.currentView.remove();

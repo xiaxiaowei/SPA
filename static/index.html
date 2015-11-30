@@ -24,7 +24,7 @@
     <!-- <h1>selected: <%= selectedChannel %></h1> -->
     <h1>Choose a payment method</h1>
     <% _.each(channels, function(channel, i) { %>
-        <li><input id="next" type="button" class=""/><%= channel%></li>
+        <li><input id="next" type="button" class="" channelId="<%= channel %>"/><%= channel %></li>
     <% }) %>
 </script>
 

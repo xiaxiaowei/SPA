@@ -3,9 +3,7 @@ AppController) {
     var router = Backbone.Router.extend({
         routes: {
             '': 'home',
-            'mobile':'mobile',
-            'broadband':'broadband',
-            'credit':'credit'
+            'channel/:channelId':'channel'
         },
         initialize: function() {
             var routeName;

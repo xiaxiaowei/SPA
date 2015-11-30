@@ -20,8 +20,9 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
             // }, this);
             return this;
         },
-        next: function() {
-            Router.navigate('mobile', {trigger: true});
+        next: function(event) {
+            var channelId = event.target.getAttribute('channelId');
+            Router.navigate('channel/'+channelId, {trigger: true});
         },
         
         // ----------------
