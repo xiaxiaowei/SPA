@@ -19,7 +19,7 @@
     </div>
 </body>
 
-<!-- Home -->
+<!-- 支付渠道选择 -->
 <script type="text/template" id="home-template">
     <!-- <h1>selected: <%= selectedChannel %></h1> -->
     <div class="title">Huawei ePay</div>
@@ -44,25 +44,26 @@
     <div class="content" style="float:left">Customer service info.: If you have payment errors, please contact 400-22121-21212.</div>
 </script>
 
+<!-- 银行卡支付 -->
 <script type="text/template" id="credit-template">
     Credit Pay
 </script>
-
+<!-- 宽带支付 -->
 <script type="text/template" id="broadband-template">
     <h1>Are you sure you want to use broadband account to buy this goods?</h1>
 </script>
-
+<!-- 手机支付 -->
 <script type="text/template" id="mobile-template">
     <h3>Vodafone mobile phone users please send SMS "#01234#121" to 01200112, or directly scan the QR with your phone, and follow the prompts to complete payment operations</h3>
 </script>
-
+<!-- 手机支付：选择国家 -->
 <script type="text/template" id="mobile-select-country-template">
     Your position is not currently located, please select the country:
     <% _.each(countries, function(country, i) { %>
         <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
     <% }) %>
 </script>
-
+<!-- 手机支付：选择运营商 -->
 <script type="text/template" id="mobile-select-operator-template">
     Your position is in the UK, please select your mobile operator:
     <% _.each(operators, function(operator, i) { %>
