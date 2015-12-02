@@ -2,12 +2,19 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
     var alertView = Backbone.View.extend({
         tagName: 'div',
         template:_.template($('#alert-template').html()),
-        initialize: function() {
-			
+        /* 参数定义
+        options: {
+            message: "",
+            icon: "",
+            buttons:[]
+        },
+        */ 
+        initialize: function(options) {
+			this.options = options;
         },
         render: function() {
             this.$el.empty();
-            this.$el.html(this.template());
+            this.$el.html(this.template(this.options));
             return this;
         }
     });

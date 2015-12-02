@@ -50,7 +50,9 @@
 </script>
 <!-- 宽带支付 -->
 <script type="text/template" id="broadband-template">
-    <h1>Are you sure you want to use broadband account to buy this goods?</h1>
+    <div class="subtitle">Are you sure you want to use broadband account to buy this goods?<div>
+    
+    <input id="pay" type="button" value="Pay Now"></input>
 </script>
 <!-- 手机支付 -->
 <script type="text/template" id="mobile-template">
@@ -70,9 +72,14 @@
         <li><input id="next" type="button" class="" operator="<%= operator %>"/><%= operator %></li>
     <% }) %>
 </script>
-
+<!-- AlertView -->
 <script type="text/template" id="alert-template">
-    
+    <% if (icon != null) { %>
+        <div class="text-center"><img src="<%= icon %>"></img></div>
+    <% } %>
+    <% if (message != null) { %>
+        <div class="subtitle"><%= message %></div>
+    <% } %>
 </script>
 
 </html>
