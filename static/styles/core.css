@@ -3,6 +3,10 @@
     padding:0;
 }
 
+*:focus{
+    outline:none; /* set focused element without hightlight outline */
+}
+
 html {
     font-size: 187.5%; /* 30 px */
 }
