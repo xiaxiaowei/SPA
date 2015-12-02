@@ -36,7 +36,10 @@
         <ul>
             <% _.each(channels, function(channel, i) { %>
                 <li>
-                    <input id="next" type="button" class="" channelId="<%= channel %>" value="<%= channel %>"/>
+                    <div tabindex="<%= i+100 %>" id="next" type="button" class="" channelId="<%= channel %>" value="<%= channel %>">
+                        <img src=""></img>
+                        <div class="text-center"><%= channel %></div>
+                    </div>
                 </li>
             <% }) %>
         </ul>

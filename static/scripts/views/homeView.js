@@ -22,7 +22,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "models/channelsIn
             return this;
         },
         next: function(event) {
-            var channelId = event.target.getAttribute('channelId');
+            var channelId = event.currentTarget.getAttribute('channelId');
             Router.navigate('channel/'+channelId, {trigger: true});
         }
     });

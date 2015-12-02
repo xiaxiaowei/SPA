@@ -25,6 +25,8 @@ html {
 /* Body */
 body {
     font-size: 1.6rem;
+    background: black;
+    color: white;
 }
 
 
@@ -33,7 +35,7 @@ body {
 }
 
 .selection {
-    width:318px;
+    width:324px;
     margin:auto;
 }
 
@@ -41,11 +43,29 @@ body {
     list-style:none;
 }
 
-.selection ul li > input{
+.selection ul li div:first-child {
     float: left;
     margin: 3px;
     width: 100px;
+    height: 140px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+.selection ul li div:focus {
+    background: gray;
+ }
+
+.selection ul li div img{
+    float: left;
+    width: 100px;
     height: 100px;
+    border: 0px;
+    background: gray;
+}
+
+.highlight {
+    background: gray;
 }
 
 .title {
