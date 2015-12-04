@@ -24,7 +24,7 @@ app.selectedCountry = '';
 app.selectedOperator = '';
 // Just for test begin
 app.countries = ['Austris', 'Belgium', 'Finland', 'Germany', 'Ireland', 'Cyprus', 'Denmark', 'France', 'Greece'];
-app.operators = ['TMobile', 'Orange'];
+app.operators = ['TMobile', 'Orange', 'ChinaMobile', 'Unicom'];
 
 // Just for test end.
 

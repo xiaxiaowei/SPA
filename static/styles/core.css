@@ -184,15 +184,85 @@ body {
     font-size: 1.2rem;
 }
 
-.footer > spin:first-child {
+.footer > span:first-child {
     color: white;
 }
 
-.footer > spin:last-child {
+.footer > span:last-child {
     color: #666;
 }
 
-/* operator-selection */
+/* operator*/
+
+.operator-content {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 127px;
+    padding-bottom: 74px;
+}
+
+.operator-footer {
+    clear: both;
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 460px;
+    margin-left:80px;
+}
+
+.operator-footer > div:first-child {
+    float:left;
+    height: 42px;
+    padding-top: 16px;
+}
+
+.operator-footer > div:last-child {
+    float:left;
+    height: 42px;
+    width:304px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #363535;
+    padding-top: 16px;
+    margin-left: 16px;
+}
+
+.operator-selection{
+    width:900 px;
+    height:195 px;
+}
+
+.operator-selection .operator-left {
+    width:45px;
+    height:195px;
+    float:left;
+    background: url(../images/scroll_left.png) center no-repeat;
+}
+
+.operator-selection .operator-right {
+    width:45px;
+    height:195px;
+    float:right;
+    background: url(../images/scroll_right.png) center no-repeat;
+}
+
 .operator-selection ul {
     list-style:none;
+}
+
+.operator-selection ul li > div {
+    float:left;
+    width: 182px;
+    height: 195px;
+    border-radius: 6px;
+    margin: 0 1px;
+}
+
+.operator-selection ul li > div .icon {
+    width: 182px;
+    height: 195px;
+}
+
+.operator-selection ul li > div:focus {
+    background: gray;
 }

@@ -21,8 +21,8 @@
 <!-- 支付渠道选择 -->
 <script type="text/template" id="home-template">
     <div class="common-title">
-        <div><spin>PAYMENT ORDER</spin></div>
-        <div><spin>Huawei ePay</spin></div>
+        <div><span>PAYMENT ORDER</span></div>
+        <div><span>Huawei ePay</span></div>
     </div>
     <div class="split-line"/>
     <div class="payinfo">
@@ -51,8 +51,8 @@
         </ul>
     </div>
     <div class="footer">
-        <spin>Customer service info.:</spin>
-        <spin> If you have payment errors, please contact 400-22121-21212.</spin>
+        <span>Customer service info.:</span>
+        <span> If you have payment errors, please contact 400-22121-21212.</span>
     </div>
 </script>
 
@@ -79,13 +79,29 @@
 </script>
 <!-- 手机支付：选择运营商 -->
 <script type="text/template" id="mobile-select-operator-template">
-    Your position is in the UK, please select your mobile operator:
+    <div class="common-title">
+        <div><span>A Grail Item</span><span>$1.00 CNY</span></div>
+        <div><span>Huawei ePay</span></div>
+    </div>
+    <div class="split-line"/>
+    <div class="operator-content"> Your position is in the UK, please select your mobile operator:</div>
     <div class="operator-selection">
+        <div class="operator-left"/>
         <ul>
             <% _.each(operators, function(operator, i) { %>
-                <li><input id="next" type="button" class="" operator="<%= operator %>"/><%= operator %></li>
+                <li>
+                    <div tabindex="<%= i+1000 %>" id="next" class="" operator="<%= operator %>">
+                        <div class="icon" style="background:url(images/operator_logo_<%= i%>.png)"/>
+                    </div>
+                </li>
             <% }) %>
         </ul>
+        <div class="operator-right"/>
+    </div>
+    
+    <div class="operator-footer">
+        <div>If you are not in the UK, please</div>
+        <div>select the country</div>
     </div>
 </script>
 <!-- AlertView -->
