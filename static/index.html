@@ -20,7 +20,6 @@
 
 <!-- 支付渠道选择 -->
 <script type="text/template" id="home-template">
-    <!-- <h1>selected: <%= selectedChannel %></h1> -->
     <div class="common-title">
         <div><spin>PAYMENT ORDER</spin></div>
         <div><spin>Huawei ePay</spin></div>
@@ -44,14 +43,17 @@
             <% _.each(channels, function(channel, i) { %>
                 <li>
                     <div tabindex="<%= i+100 %>" id="next" type="button" class="" channelId="<%= channel %>" value="<%= channel %>">
-                        <img src=""></img>
-                        <div class="text-center"><%= channel %></div>
+                        <div class="icon" style="background:url(images/channel_<%= i%>.gif) center no-repeat;"/>
+                        <div class="name"><%= channel %></div>
                     </div>
                 </li>
             <% }) %>
         </ul>
     </div>
-    <div class="content" style="float:left">Customer service info.: If you have payment errors, please contact 400-22121-21212.</div>
+    <div class="footer">
+        <spin>Customer service info.:</spin>
+        <spin> If you have payment errors, please contact 400-22121-21212.</spin>
+    </div>
 </script>
 
 <!-- 银行卡支付 -->

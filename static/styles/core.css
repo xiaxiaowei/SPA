@@ -69,7 +69,7 @@ body {
     text-align: right;
 }
 
-/**/
+/* 支付信息 */
 
 .payinfo {
     height:156px; 
@@ -113,21 +113,10 @@ body {
     font-size: 1.8rem;
 }
 
-.content {
-    font-size: 1.5rem;
-    height: 65px;
-    padding-top: 60px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-
-/*****/
+/* 渠道选择 */
 
 .selection {
-    width:324px;
+    width:900px;
     margin:auto;
 }
 
@@ -135,26 +124,32 @@ body {
     list-style:none;
 }
 
-.selection ul li div:first-child {
+.selection ul li > div {
     float: left;
-    margin: 3px;
-    width: 100px;
-    height: 140px;
+    margin:0 49px;
+    width: 200px;
+    height: 227px;
     border-radius: 6px;
     border: 1px solid gray;
 }
 
-.selection ul li div:focus {
-    background: gray;
- }
-
-.selection ul li div img{
-    float: left;
-    width: 100px;
-    height: 100px;
-    border: 0px;
+.selection ul li > div:focus {
     background: gray;
 }
+
+.selection ul li div .icon{
+    height: 111px;
+    margin: 26px 0;
+    background:center no-repeat;
+}
+
+.selection ul li div .name{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+/* */
 
 .highlight {
     background: gray;
@@ -171,7 +166,28 @@ body {
     padding-left: 10%;
 }
 
+.content {
+    font-size: 1.5rem;
+    height: 65px;
+    padding-top: 60px;
+}
 
+.text-center {
+    text-align: center;
+}
 
+/* 页面脚信息 */
 
+.footer {
+    clear: both;
+    padding-top: 218px;
+    font-size: 1.2rem;
+}
 
+.footer > spin:first-child {
+    color: white;
+}
+
+.footer > spin:last-child {
+    color: #666;
+}
