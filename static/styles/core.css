@@ -194,6 +194,28 @@ body {
 
 /* operator*/
 
+.operator-title {
+    width: 100%;
+    height: 31px;
+}
+
+.operator-title div:first-child {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.operator-title div:first-child span:first-child {
+    color: #00A2FF;
+    margin-right: 15px;
+}
+
+.operator-title div:last-child {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
 .operator-content {
     text-align: center;
     font-size: 1.5rem;
