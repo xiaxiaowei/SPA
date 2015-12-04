@@ -191,3 +191,8 @@ body {
 .footer > spin:last-child {
     color: #666;
 }
+
+/* operator-selection */
+.operator-selection ul {
+    list-style:none;
+}
