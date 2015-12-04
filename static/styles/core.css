@@ -33,10 +33,98 @@ body {
     color: white;
 }
 
-
+/* Main Content */
 .main-content {
-    margin: 5px;
+    margin: auto;
+    margin-top: 148px;
+    width:900px;
 }
+
+/* 分割线 */
+.split-line {
+    background: white;
+    width: 100%;
+    height: 1px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    clear:both;
+}
+
+/* 公共标题 */
+.common-title {
+    width:100%;
+    
+    height:31px;
+}
+
+.common-title div:first-child {
+    width:50%;
+    float: left;
+    text-align: left;
+}
+
+.common-title div:last-child {
+    width:50%;
+    float:left;
+    text-align: right;
+}
+
+/**/
+
+.payinfo {
+    height:156px; 
+    width:40%;
+    margin:auto;
+}
+
+.payinfo > .icon {
+    width:156px;
+    height:156px;
+    float:left;
+    background:url(../images/pay_icon.png) center no-repeat;
+}
+
+.payinfo > .detail {
+    width:500px;
+    height:156px;
+}
+
+.payinfo > .detail > div:first-child {
+    padding-top: 30px;
+}
+
+/* 价格信息 */
+.priceinfo {
+    padding-left: 20%;
+}
+
+.priceinfo > span:first-child {
+    color: white;
+    font-size: 2.4rem;
+}
+
+.priceinfo > span:nth-child(2) {
+    color: #00A2FF;
+    font-size: 3.6rem;
+}
+
+.priceinfo > span:last-child {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.content {
+    font-size: 1.5rem;
+    height: 65px;
+    padding-top: 60px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/*****/
 
 .selection {
     width:324px;
@@ -73,35 +161,17 @@ body {
 }
 
 .title {
-    font-size: 3.2rem;
+    font-size: 1.5rem;
     text-align: right;
     
 }
 
 .subtitle {
-    font-size: 3.2rem;
+    font-size: 1.5rem;
     padding-left: 10%;
 }
 
-.content {
-    font-size: 1.8rem;
-}
 
-.text-center {
-    text-align: center;
-}
 
-.priceinfo {
-    padding-left: 20%;
-}
 
-.priceinfo span:first-child {
-    color: red;
-    font-size: 3.2rem;
-}
-
-.priceinfo span:last-child {
-    color: gray;
-    font-size: 1.8rem;
-}
 

@@ -13,8 +13,7 @@
 </head>
 <body>
     <div id="body">
-        <section id="main" class="content-wrapper main-content clear-fix">
-            
+        <section id="main" class="main-content">
         </section>
     </div>
 </body>
@@ -22,15 +21,23 @@
 <!-- 支付渠道选择 -->
 <script type="text/template" id="home-template">
     <!-- <h1>selected: <%= selectedChannel %></h1> -->
-    <div class="title">Huawei ePay</div>
-    <div class="subtitle">
-        <img src="" style="width:20px;height:20px"/>
-        <span>A Grail Item<span>
+    <div class="common-title">
+        <div><spin>PAYMENT ORDER</spin></div>
+        <div><spin>Huawei ePay</spin></div>
     </div>
-    <div class="priceinfo">
-        <span>$1.00</span>
-        <span>CNY</span>
+    <div class="split-line"/>
+    <div class="payinfo">
+        <div class="icon"></div>
+        <div class="detail">
+            <div>A Grail Item</div>
+            <div class="priceinfo">
+                <span>$</span>
+                <span>1.00</span>
+                <span>CNY</span>
+            </div>
+        </div>
     </div>
+    <div class="split-line"/>
     <div class="content text-center">Choose a payment method</div>
     <div class="selection">
         <ul>
