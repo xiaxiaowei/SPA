@@ -56,6 +56,7 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
         renderView: function(view) {
             this.currentView && this.currentView.remove();
+            $(document).unbind("keypress"); // 取消键盘监听
             $('#main').html(view.render().el);
             this.currentView = view;
         }
