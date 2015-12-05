@@ -45,11 +45,11 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
             this.$el.find("div[operator='"+this.selectedOperator()+"']").css('background','gray'); // .focus();
             if (this.rangeStart <= 0)
             {
-                this.$el.find(".operator-left").hide();
+                this.$el.find(".operator-left").css('background','url()');
             }
             if (this.rangeEnd >= this.operators.length - 1)
             {
-                this.$el.find(".operator-right").hide();
+                this.$el.find(".operator-right").css('background','url()');
             }
             for (var i=0; i<this.operators.length; i++) {
                 if (i < this.rangeStart || i > this.rangeEnd) {
