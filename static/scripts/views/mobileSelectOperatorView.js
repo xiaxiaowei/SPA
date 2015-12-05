@@ -32,6 +32,11 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                     self.changeSelected(-1);
                     self.render();
                 }
+                else if (event.keyCode==13) {
+                    var operator = self.selectedOperator();
+                    app.selectedOperator = operator;
+                    Router.navigate('mobile', {trigger: true});
+                }
                 return false;
             });
             return this;
