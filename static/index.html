@@ -72,10 +72,21 @@
 </script>
 <!-- 手机支付：选择国家 -->
 <script type="text/template" id="mobile-select-country-template">
-    Your position is not currently located, please select the country:
-    <% _.each(countries, function(country, i) { %>
-        <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
-    <% }) %>
+    <div class="operator-title">
+        <div><span>A Grail Item</span><span>$1.00 CNY</span></div>
+        <div><span>Huawei ePay</span></div>
+    </div>
+    <div class="split-line"/>
+    <div class="operator-content">Your position is not currently located, please select the country:</div>
+    <div class="country-selection">
+        <div class="country-left"/>
+        <ul>
+            <% _.each(countries, function(country, i) { %>
+                <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
+            <% }) %>
+        </ul>
+        <div class="country-right"/>
+    </div>
 </script>
 <!-- 手机支付：选择运营商 -->
 <script type="text/template" id="mobile-select-operator-template">
@@ -84,7 +95,7 @@
         <div><span>Huawei ePay</span></div>
     </div>
     <div class="split-line"/>
-    <div class="operator-content"> Your position is in the UK, please select your mobile operator:</div>
+    <div class="operator-content">Your position is in the UK, please select your mobile operator:</div>
     <div class="operator-selection">
         <div class="operator-left"/>
         <ul>
