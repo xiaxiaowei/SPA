@@ -79,7 +79,8 @@
     <div class="split-line"/>
     <div class="operator-content">Your position is not currently located, please select the country:</div>
     <div class="country-selection">
-        <div class="country-left"/>
+        <div class="country-left" style="height:<%= 158*countries.length%>px"/>
+        <div class="country-center">
         <% _.each(countries, function(row_countries, i) { %>
             <div class="country-row">
                 <ul>
@@ -94,16 +95,8 @@
                 </ul>
             </div>
         <% }) %>
-        <!--
-        <ul>
-            <% _.each(countries, function(country, i) { %>
-                <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
-            <% }) %>
-        </ul>
-        
-        -->
-        
-        <div class="country-right"/>
+        </div>
+        <div class="country-right" style="height:<%= 158*countries.length%>px"/>
     </div>
 </script>
 <!-- 手机支付：选择运营商 -->

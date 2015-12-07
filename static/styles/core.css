@@ -290,13 +290,16 @@ body {
 }
 
 /* Country */
-
+.country-selection {
+    width: 900px;
+}
 .country-selection ul {
     list-style:none;
 }
 
 .country-selection .country-row {
     clear: both;
+    width: 810px;
 }
 
 .country-selection ul .country-item {
@@ -316,4 +319,22 @@ body {
     width: 182px;
     height: 82px;
     text-align: center;
+}
+
+.country-selection .country-left {
+    width:45px;
+    height:195px;
+    float:left;
+    background: url(../images/scroll_left.png) center no-repeat;
+}
+
+.country-selection .country-right {
+    width:45px;
+    height:195px;
+    float:right;
+    background: url(../images/scroll_right.png) center no-repeat;
+}
+
+.country-selection .country-center {
+    float:left;
 }
