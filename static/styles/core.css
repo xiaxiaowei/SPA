@@ -305,5 +305,15 @@ body {
     height: 158px;
     border-radius: 6px;
     margin:0 10px;
-    background: red;
+}
+
+.country-selection ul .country-item .icon{
+    width: 182px;
+    height: 100px;
+}
+
+.country-selection ul .country-item .name{
+    width: 182px;
+    height: 82px;
+    text-align: center;
 }

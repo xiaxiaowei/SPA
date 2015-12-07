@@ -86,7 +86,7 @@
                     <% _.each(row_countries, function(country, i) { %>
                         <li>
                             <div class="country-item" id="next" country="<%= country %>">
-                                <div class="icon"/>
+                                <div class="icon" style="background:url(images/country/logo_<%= i%>.png)"/>
                                 <div class="name"><%= country %></div>
                             </div>
                         </li>
@@ -120,7 +120,7 @@
             <% _.each(operators, function(operator, i) { %>
                 <li>
                     <div tabindex="<%= i+1000 %>" id="next" class="" operator="<%= operator %>">
-                        <div class="icon" style="background:url(images/operator_logo_<%= i%>.png)"/>
+                        <div class="icon" style="background:url(images/operator/operator_logo_<%= i%>.png)"/>
                     </div>
                 </li>
             <% }) %>
