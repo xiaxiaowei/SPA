@@ -80,11 +80,29 @@
     <div class="operator-content">Your position is not currently located, please select the country:</div>
     <div class="country-selection">
         <div class="country-left"/>
+        <% _.each(countries, function(row_countries, i) { %>
+            <div class="country-row">
+                <ul>
+                    <% _.each(row_countries, function(country, i) { %>
+                        <li>
+                            <div class="country-item" id="next" country="<%= country %>">
+                                <div class="icon"/>
+                                <div class="name"><%= country %></div>
+                            </div>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }) %>
+        <!--
         <ul>
             <% _.each(countries, function(country, i) { %>
                 <li><input id="next" type="button" class="" country="<%= country %>"/><%= country %></li>
             <% }) %>
         </ul>
+        
+        -->
+        
         <div class="country-right"/>
     </div>
 </script>
