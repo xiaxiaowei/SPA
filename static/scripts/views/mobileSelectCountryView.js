@@ -40,7 +40,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                     self.render();
                 }
                 else if (event.keyCode==39) {
-                    
+                    self.changeSelected(self.LOC_RIGHT);
                     self.render();
                 }
                 else if (event.keyCode==38) { // Up
@@ -48,7 +48,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                     self.render();
                 }
                 else if (event.keyCode==37) {
-                    
+                    self.changeSelected(self.LOC_LEFT);
                     self.render();
                 }
                 // 下40 上38
@@ -115,6 +115,13 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                     break;
                 }
                 case this.LOC_RIGHT: {
+                    var currentColumn = this.selected % this.totalColumns;
+                    if (this.selected < this.countries.length - 1 && currentColumn < this.totalColumns - 1) {
+                        if (currentColumn == this.rangeEnd) {
+                            this.changeRange(1);
+                        }
+                        this.selected = this.selected + 1;
+                    }
                     break;
                 }
                 case this.LOC_DOWN: {
@@ -127,12 +134,30 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                     break;
                 }
                 case this.LOC_LEFT: {
+                    var currentColumn = this.selected % this.totalColumns;
+                    if (this.selected > 0 && currentColumn > 0) {
+                        if (currentColumn == this.rangeStart) {
+                            this.changeRange(-1);
+                        }
+                        this.selected = this.selected - 1;
+                    }
                     break;
                 }
             }
         },
         changeRange: function(offset) {
-            
+            if (offset > 0){
+                if (this.rangeEnd < this.totalColumns - 1) {
+                    this.rangeStart = this.rangeStart + 1;
+                    this.rangeEnd = this.rangeEnd + 1;
+                }
+            }
+            else if (offset < 0){
+                if (this.rangeStart > 0) {
+                    this.rangeStart = this.rangeStart - 1;
+                    this.rangeEnd = this.rangeEnd - 1;
+                }
+            }
         }
     });
     return mobileSelectCountryView;
