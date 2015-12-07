@@ -99,7 +99,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                 displayCountries.push(currentRowColumns);
             }
             
-            // 数据
+            // 数据 
             this.totalColumns = totalColumns;
             this.totalRows = totalRows;
             this.displayCountries = displayCountries;
