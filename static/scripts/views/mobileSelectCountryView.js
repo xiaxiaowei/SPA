@@ -2,6 +2,10 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
     var mobileSelectCountryView = Backbone.View.extend({
         COLUMN_SIZE: 4,
         ROW_SIZE: 2,
+        LOC_UP: 0,
+        LOC_RIGHT: 1,
+        LOC_DOWN: 2,
+        LOC_LEFT: 3,
         tagName: 'div',
         template:_.template($('#mobile-select-country-template').html()),
         initialize: function() {
@@ -11,14 +15,14 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
             // 显示
             this.rangeStart = 0;
             this.rangeEnd = this.COLUMN_SIZE - 1;
-            
-            // 
-            this.buildDisplayData();
         },
         events: {
             "click #next": "next"
         },
         render: function() {
+            // 
+            this.buildDisplayData();
+            
             this.$el.empty();
             var jsonObject = {"countries":this.displayCountries};
             this.$el.html(this.template(jsonObject)); //模板使用JSON对象
@@ -28,6 +32,31 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                 var country = this.hideCountries[i];
                 this.$el.find("div[country='"+country+"']").hide();
             }
+            // 监听键盘事件
+            self = this;
+            $(document).one("keypress", function(event){ // 绑定一次
+                if (event.keyCode==40) { //Down
+                    self.changeSelected(self.LOC_DOWN);
+                    self.render();
+                }
+                else if (event.keyCode==39) {
+                    
+                    self.render();
+                }
+                else if (event.keyCode==38) { // Up
+                    self.changeSelected(self.LOC_UP);
+                    self.render();
+                }
+                else if (event.keyCode==37) {
+                    
+                    self.render();
+                }
+                // 下40 上38
+                else if (event.keyCode==13) {
+                    
+                }
+                return false;
+            });
             return this;
         },
         next: function(event) {
@@ -75,6 +104,35 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
             this.totalRows = totalRows;
             this.displayCountries = displayCountries;
             this.hideCountries = hideCountries;
+        },
+        changeSelected: function(location) {
+            switch(location) {
+                case this.LOC_UP: {
+                    var currentRow = Math.ceil((this.selected + 1) / this.totalColumns) - 1;
+                    if (currentRow > 0) {
+                        this.selected = this.selected - this.totalColumns;
+                    }
+                    break;
+                }
+                case this.LOC_RIGHT: {
+                    break;
+                }
+                case this.LOC_DOWN: {
+                    var currentRow = Math.ceil((this.selected + 1) / this.totalColumns) - 1;
+                    if (currentRow < this.totalRows - 1) {
+                        if (this.selected + this.totalColumns <= this.countries.length - 1) {
+                            this.selected = this.selected + this.totalColumns;
+                        }
+                    }
+                    break;
+                }
+                case this.LOC_LEFT: {
+                    break;
+                }
+            }
+        },
+        changeRange: function(offset) {
+            
         }
     });
     return mobileSelectCountryView;
