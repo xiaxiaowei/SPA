@@ -319,6 +319,7 @@ body {
     width: 182px;
     height: 82px;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .country-selection .country-left {
@@ -337,4 +338,23 @@ body {
 
 .country-selection .country-center {
     float:left;
+}
+
+.restart-tip {
+    width:900px;
+    clear: both;
+}
+
+.restart-tip .checkbox {
+    width: 42px;
+    height: 42px;
+    background: url(../images/checkbox_normal.png) center no-repeat;
+    float: left;
+}
+
+.restart-tip .info {
+    height: 42px;
+    font-size: 1.2rem;
+    padding-left: 55px;
+    padding-top: 10px;
 }
