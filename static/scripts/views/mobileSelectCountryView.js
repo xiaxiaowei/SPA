@@ -32,6 +32,13 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                 var country = this.hideCountries[i];
                 this.$el.find("div[country='"+country+"']").hide();
             }
+            // 左右箭头指示
+            if (this.rangeStart <= 0){
+                this.$el.find(".country-left").css('background','url()');
+            }
+            if (this.rangeEnd >= this.totalColumns - 1){
+                this.$el.find(".country-right").css('background','url()');
+            }
             // 监听键盘事件
             self = this;
             $(document).one("keypress", function(event){ // 绑定一次
@@ -53,7 +60,9 @@ define(['jquery', 'underscore', 'backbone', "routers/router"], function ($, _, B
                 }
                 // 下40 上38
                 else if (event.keyCode==13) {
-                    
+                    var country = self.countries[self.selected];
+                    app.selectedCountry = country;
+                    Backbone.history.history.back(); //返回
                 }
                 return false;
             });
