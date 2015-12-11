@@ -20,10 +20,10 @@ requirejs.config({
 });
 
 var app = app || {};
+// Just for test begin
 app.selectedCountry = '';
 app.selectedOperator = '';
-// Just for test begin
-app.countries = ['Austris', 'Belgium', 'Finland', 'Germany', 'Ireland', 'Cyprus', 'Denmark', 'France', 'Greece'];
+app.countries = ['Austris', 'Belgium', 'Finland', 'Germany', 'Ireland', 'Cyprus', 'Denmark', 'France', 'Greece', 'China', 'Japan', 'US'];
 app.operators = ['TMobile', 'Orange', 'ChinaMobile', 'Unicom','X1','X2','X3','X4'];
 
 // Just for test end.
