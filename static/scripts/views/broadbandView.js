@@ -9,7 +9,7 @@ define(['jquery', 'underscore', 'backbone', "routers/router", "components/utils"
                 "click #pay": "pay"
         },
         pay: function (params) {
-            Utils.showAlert("Payment Successfully!", "images/pay_success.png", null);
+            Utils.showAlert("Payment Successfully!", "images/pay_success.png", ["OK","Cancel"]);
         },
         render: function() {
             this.$el.empty();

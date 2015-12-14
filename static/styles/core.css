@@ -369,3 +369,24 @@ body {
     text-align: center;
     font-size: 2.2rem;
 }
+
+.alert-view .buttons {
+    width:600px;
+    height: 84px;
+    margin: auto;
+}
+
+.alert-view .button {
+    width: 280px;
+    height: 54px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 2.0rem;
+    float:left;
+    background: #8b8b8b ;
+    border-radius: 6px;
+}
+
+.alert-view .button:focus {
+    background: #0072ff;
+}
