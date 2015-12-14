@@ -132,12 +132,14 @@
 </script>
 <!-- AlertView -->
 <script type="text/template" id="alert-template">
-    <% if (icon != null) { %>
-        <div class="text-center"><img src="<%= icon %>"></img></div>
-    <% } %>
-    <% if (message != null) { %>
-        <div class="text-center"><%= message %></div>
-    <% } %>
+    <div class="alert-view">
+        <% if (icon != null) { %>
+            <div class="icon" style="background:url(<%= icon %>) center no-repeat"></div>
+        <% } %>
+        <% if (message != null) { %>
+            <div class="message"><%= message %></div>
+        <% } %>
+    </div>
 </script>
 
 </html>

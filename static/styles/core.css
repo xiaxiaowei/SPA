@@ -358,3 +358,14 @@ body {
     padding-left: 55px;
     padding-top: 10px;
 }
+
+/* AlertView */
+
+.alert-view .icon {
+    height: 300px;
+}
+
+.alert-view .message {
+    text-align: center;
+    font-size: 2.2rem;
+}
