@@ -1,0 +1,32 @@
+* {
+    margin:0; 
+    padding:0;
+}
+
+html {
+    font-size: 187.5%; /* 30 px */
+}
+@media screen and (max-width: 1920px) {
+    html {
+        font-size: 125%; /* 20 px */
+    } 
+}
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 62.5%; /* 10 px */
+    }
+}
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 31.25%; /* 5 px */
+    }
+}
+
+/* Common */
+.split-line {
+    background: #CECFD1;
+    width: 95%;
+    height: 1px;
+    clear: both;
+    margin: auto;
+}
